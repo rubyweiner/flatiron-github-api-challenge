@@ -35,8 +35,8 @@ class App extends Component {
           {this.state.userData === null ?
             null
           :
-            <Grid.Column width={5}>
-              <Segment>
+            <Grid.Column width={3}>
+              <Segment >
                 <Header as="h3">{this.state.userData.name}</Header>
                 <Image src={this.state.userData.avatar_url} size='small' />
                 <SearchResultsContainer userData={this.state.userData}/>
