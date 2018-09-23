@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Container } from 'semantic-ui-react';
 import SearchBar from '../components/SearchBar';
 
 
@@ -13,9 +12,9 @@ class SearchContainer extends Component {
 
   render() {
     return (
-      <Container>
+      <div>
         <SearchBar onSubmit={this.handleSearch}/>
-      </Container>
+      </div>
     )
   }
 }
