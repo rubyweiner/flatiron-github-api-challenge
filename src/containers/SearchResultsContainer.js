@@ -14,7 +14,10 @@ class SearchResultsContainer extends Component {
     return (
       <List>
         <List.Item>{this.props.userData.public_repos} public repos</List.Item>
-        <List.Item icon='users' content={this.props.userData.login} />
+        <List.Item
+          icon='users'
+          content={<a href={this.props.userData.html_url}>{this.props.userData.login}</a>}
+        />
         <List.Item
           icon='mail'
           content={this.props.userData.email ? <a href={this.props.userData.email}>this.props.userData.email</a> : "email - N/A"}
