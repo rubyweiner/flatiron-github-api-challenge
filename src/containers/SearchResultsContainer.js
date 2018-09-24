@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
-import { Header, List } from 'semantic-ui-react';
+import {List } from 'semantic-ui-react';
 
 
 class SearchResultsContainer extends Component {
-
-  handleSearch = event => {
-    event.preventDefault()
-    let username = event.currentTarget[0].value
-    this.props.handleSearch(username)
-  }
 
   render() {
     return (
