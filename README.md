@@ -1,3 +1,17 @@
+Instructions: 
+
+1. Run `npm install && npm start` to start application
+2. Navigate to localhost:3000
+3. Enter username of GitHub account you would like to search
+  - a fetch request is sent to the GitHub API utilizing the user's input to specify endpoint
+  - response JSON object is displayed in the console and saved as 'userData' in state for App.js
+  - userData is sent from App.js as props to SearchResultsContainer.js to display account's available information
+4. Results will display on the right-hand of the screen
+
+* styling is done using Semantic UI * 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
