@@ -6,7 +6,7 @@ class SearchResultsContainer extends Component {
 
   render() {
     return (
-      <List>
+      <List >
         <List.Item>{this.props.userData.public_repos} public repos</List.Item>
         <List.Item
           icon='users'

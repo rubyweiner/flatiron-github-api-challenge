@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SearchContainer from './containers/SearchContainer';
 import SearchResultsContainer from './containers/SearchResultsContainer';
 import './App.css';
-import { Grid, Segment, Header, Image } from 'semantic-ui-react';
+import { Grid, Segment, Header, Image, Divider } from 'semantic-ui-react';
 
 
 class App extends Component {
@@ -30,25 +30,25 @@ class App extends Component {
 
     return (
       <div className="body">
+      <Header as="h2"> Welcome! </Header>
+      <Divider width={5}/>
         <Grid columns='equal'>
           <Grid.Column width={5}>
             <Segment >
               <Header as="h3" textAlign="center">Search GitHub Username:</Header>
               <SearchContainer handleSearch={this.fetchUserData}/>
             </Segment>
-          </Grid.Column>
 
           {this.state.userData === null ?
             null
           :
-            <Grid.Column width={4}>
-              <Segment padded>
-                <Header as="h3">{this.state.userData.name}</Header>
-                <Image src={this.state.userData.avatar_url} size='small' />
-                <SearchResultsContainer userData={this.state.userData}/>
-              </Segment>
-            </Grid.Column>
+            <Segment padded>
+              <Header as="h3">{this.state.userData.name}</Header>
+              <Image src={this.state.userData.avatar_url} size='small' />
+              <SearchResultsContainer userData={this.state.userData}/>
+            </Segment>
           }
+          </Grid.Column>
         </Grid>
       </div>
     );
